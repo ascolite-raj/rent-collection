@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import '../screens/dashboard/dashboard_screen.dart';
@@ -53,6 +54,16 @@ class AppDrawer extends StatelessWidget {
                     .toList(),
               ),
             ),
+            const Divider(height: 1),
+            ListTile(
+              leading: const Icon(Icons.logout),
+              title: const Text('Sign out'),
+              onTap: () async {
+                Navigator.pop(context);
+                await FirebaseAuth.instance.signOut();
+              },
+            ),
+            const SizedBox(height: 8),
           ],
         ),
       ),

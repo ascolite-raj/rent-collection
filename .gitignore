@@ -17,3 +17,7 @@ ios/.symlinks/
 ios/Flutter/Flutter.framework
 ios/Flutter/Flutter.podspec
 *.lock
+
+# Firebase config (not committed to public repo)
+android/app/google-services.json
+lib/firebase_options.dart
